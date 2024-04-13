@@ -42,7 +42,7 @@ for actual_line, predicted_line in zip(actual_lines, predicted_lines):
     actual_values = remove_boundary_values(actual_line)
     predicted_values = predicted_line.strip().split()
     for i,j in zip(actual_values,predicted_values):
-        confusionMatrix[mapper[i]][mapper[j]]+=1 
+        confusionMatrix[mapper[i]][mapper[j]]+=1
 
 # Delete the last row
 confusion_matrix = confusionMatrix[:-1]
@@ -54,4 +54,3 @@ for row in confusion_matrix:
     print(row)
 
 plot_confusion_matrix(confusionMatrix,7,"Confusion_Matrix/confusionMatrix7")
-
